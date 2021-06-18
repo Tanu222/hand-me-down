@@ -1,0 +1,110 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="../css/sell-books.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../lib/dropzone-5.7.0/dist/dropzone.js"></script>
+    <link rel="stylesheet" href="../lib/dropzone-5.7.0/dist/dropzone.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../javascript/sellBooks.js"></script>
+    <title>Sell Books</title>
+</head>
+
+<body>
+    <header>
+        <div class="col">
+            <div class="row">
+                <div id="logo" class="col">
+                    <img src="../images/logo.png">
+                    <h2>Hand Me Down</h2>
+                </div>
+                <nav class="col text-md-right">
+                    <ul>
+                        <li><a href="#">Get Books</a></li>
+                        <li><a href="#">Get Stationary</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Login</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div id="success"></div>
+    <div class="container">
+        <form id='sell-books' onsubmit="submitBook(event)">
+            <h2>Post Your Product</h2>
+            <fieldset class="form-group">
+                <div class="form-group row">
+                    <label class="col-form-label  text-md-right col-md-2 align-self-center" name="searchTerm">Book Name
+                        <div class="star">*</div></label>
+                    <div class="col-md-9">
+                        <input class="form-control" type="text" placeholder="Book Name" id="bookName" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="text-md-right col-md-2 align-self-center">Author</label>
+                    <div class="col-md-9">
+                        <input class="form-control" type="text" placeholder="Author" id="author">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="text-md-right col-md-2 align-self-center">Publications</label>
+                    <div class="col-md-9">
+                        <input class="form-control" type="text" placeholder="Publications" id="publication">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="text-md-right col-md-2 align-self-center">Subject<div class="star">*</div></label>
+                    <div class="col-md-9">
+                        <input class="form-control" type="text" placeholder="Subject" id="subject" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="text-md-right col-md-2 align-self-center">Year<div class="star">*</div></label>
+                    <div class="col-9">
+                        <select class="form-control" id="year" required>
+                            <option>Choose</option>
+                            <option>FE</option>
+                            <option>SE</option>
+                            <option>TE</option>
+                            <option>BE</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="text-md-right form-group row">
+                    <label class="col-md-2">Description</label>
+                    <div class="col-9">
+                        <textarea class="form-control" placeholder="how old is your book?" id="description"></textarea>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="text-md-right col-md-2 align-self-center">Contact Number<div class="star">*</div>
+                        </label>
+                    <div class="col-md-9">
+                        <input class="form-control" type="tel" placeholder="Contact Number" id="phone" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="text-md-right col-md-2 align-self-center">Set a Price<div class="star">*</div></label>
+                    <div class="col-md-9">
+                        <input class="form-control" type="number" placeholder="Price" id="price" required>
+                    </div>
+                </div>
+                <div class='content row'>
+                    <label class="col-md-2 text-md-right">Upload Photos</label>
+                    <div action="http://127.0.0.1:1337/api/upload" class="dropzone col-md-9" id="myDropzone">
+                  
+                    </div> 
+                </div> 
+                <div class="form-group row">
+                    <div class="offset-md-5 col-auto">
+                        <button class="btn btn-primary" type="submit"><a href="./success.html">Submit</a></button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+</body>
+
+</html>
