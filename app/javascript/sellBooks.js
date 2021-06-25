@@ -1,4 +1,4 @@
-const API_SERVER = 'https://handmidown.heroku.com';
+const API_SERVER = 'https://handmidown.herokuapp.com';
 
 
 let form = document.getElementById('sell-books');

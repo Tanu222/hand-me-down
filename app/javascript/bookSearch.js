@@ -1,7 +1,7 @@
 //console.log("Inside javascript of book-search")
 
 let books;
-const API_SERVER = 'https://handmidown.heroku.com';
+const API_SERVER = 'https://handmidown.herokuapp.com';
 
 
 fetch(API_SERVER + '/api/books/all')
