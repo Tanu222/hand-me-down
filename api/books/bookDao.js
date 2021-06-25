@@ -9,7 +9,8 @@ const { Client } = require('pg');
 // };
 
 const pgConfig = {
-    host: 'ec2-52-21-153-207.compute-1.amazonaws.com',
+    // host: 'ec2-52-21-153-207.compute-1.amazonaws.com',
+    host: 'localhost',
     database: 'd84gh391jbntjj',
     user: 'urtegrhlzovrhr',
     port: 5432,
