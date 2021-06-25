@@ -1,5 +1,5 @@
 const { Client } = require('pg');
-
+//use this when server is on local
 // const pgConfig = {
 //     user: 'postgres',
 //     host: 'localhost',
@@ -9,8 +9,8 @@ const { Client } = require('pg');
 // };
 
 const pgConfig = {
-    // host: 'ec2-52-21-153-207.compute-1.amazonaws.com',
-    host: 'localhost',
+    //host: 'ec2-52-21-153-207.compute-1.amazonaws.com',  //use this in local- heroku case
+    host: 'localhost',// use this in heroku-heroku case
     database: 'd84gh391jbntjj',
     user: 'urtegrhlzovrhr',
     port: 5432,

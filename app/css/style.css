@@ -14,6 +14,9 @@ color: aliceblue;
 .navbar-brand a:hover{
     text-decoration: none;
 }
+.collapse{
+    text-align: right;
+}
 .super{
     background-color: rgba(0,0,0,0.9);
 }

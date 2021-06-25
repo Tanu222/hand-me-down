@@ -13,18 +13,6 @@ const router = express.Router();
 router.use(bodyParser.json({ type: 'application/json' }));
 
 
-router.use('/displayText/all', (req, res, next) => {
-    if (req.method === 'GET') {
-        languageCtrl.getAllDisplayText(req, res, next);
-    } else {
-        logger.log('warn', req.method + ' ' + req.baseUrl + ' - Request method is not supported.');
-        return res.status(405).send({
-            message: 'Invalid Request Method'
-        });
-    }
-});
-
-
 
 function getbook(request, res) {
     console.log(request.query.id)
@@ -39,7 +27,8 @@ function getbook(request, res) {
 }
 
 
-function createbook(req, res) {
+const createbook = (req, res) => {
+
     console.log('Received book post request');
 
     let retVal;
@@ -118,8 +107,8 @@ router.use('/all', (req, res, next) => {
     if (req.method === 'GET') {
         bookDao.selectbooks((err, books) => {
             if (err) {
-                console.error("Error reported while selecting book " + err.message);
-                res.send("error while posting book")
+                console.error("Error reported while searching books " + err.message);
+                res.send("error while searching books")
             } else {
                 res.send((books));
             }
