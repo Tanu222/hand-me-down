@@ -1,8 +1,10 @@
 //console.log("Inside javascript of book-search")
 
 let books;
+const API_SERVER = 'https://handmidown.heroku.com';
 
-fetch('http://127.0.0.1:1337/api/books/all')
+
+fetch(API_SERVER + '/api/books/all')
   .then(response => response.json())
   .then(data => {
     books = data;

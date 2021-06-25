@@ -1,3 +1,6 @@
+const API_SERVER = 'https://handmidown.heroku.com';
+
+
 let form = document.getElementById('sell-books');
 let bookImageUrl;
 let submitBook = (e) => {
@@ -16,7 +19,7 @@ let submitBook = (e) => {
         "imageUrl": bookImageUrl
     }
     console.log(JSON.stringify(book));
-    postData('http://127.0.0.1:1337/api/books', { book })
+    postData(API_SERVER + '/api/books', { book })
         .then(data => {
             console.log(data); // JSON data parsed by `data.json()` call
             // window.location.href = "./success.html";

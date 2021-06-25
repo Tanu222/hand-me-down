@@ -1,4 +1,5 @@
 //console.log("Inside javascript of book-search");
+const API_SERVER = 'https://handmidown.heroku.com';
 
 let book;
 
@@ -6,7 +7,7 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const bookId = urlParams.get('id')
 
-fetch('http://127.0.0.1:1337/api/books?id='+bookId)
+fetch(API_SERVER + '/api/books?id='+bookId)
     .then(response => response.json())
     .then(data => {
         book = data;
