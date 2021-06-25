@@ -37,4 +37,5 @@ app.use('/api/books', bookRoute);
 
 
 console.log('Node JS Server is listening on ' + port);
-app.listen(port, host);
+app.listen(process.env.PORT || 5000);
+// app.listen(port, host);
