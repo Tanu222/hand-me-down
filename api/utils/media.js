@@ -3,8 +3,8 @@ let shortid = require("shortid");
 let fs = require('fs');
 
 
-// const CONTENT_STORAGE_LOCAL_DIR = __dirname + '//app//upload';
-const CONTENT_STORAGE_LOCAL_DIR = "C:\\dev\\HandMeDown\\app\\upload\\";
+const CONTENT_STORAGE_LOCAL_DIR = __dirname + '/app/upload/';
+//const CONTENT_STORAGE_LOCAL_DIR = "C:\\dev\\HandMeDown\\app\\upload\\";
 
 exports.uploadFile = (req, next) => {
 
