@@ -1,34 +1,24 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="../css/sell-books.css">
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/sell-books.css">
+    <link rel="stylesheet" href="/css/style.css">
+
     <script src="../lib/dropzone-5.7.0/dist/dropzone.js"></script>
     <link rel="stylesheet" href="../lib/dropzone-5.7.0/dist/dropzone.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="../javascript/sellBooks.js"></script>
+    <script src="/javascript/jquery.slim.min.js"></script>
+    <script src="/javascript/popper.min.js"></script>
+    <script src="/javascript/bootstrap.min.js"></script>
+
+    <script src="/javascript/header.js"></script>
+    <script src="/javascript/sellBooks.js"></script>
     <title>Sell Books</title>
 </head>
 
-<body>
-    <header>
-        <div class="col">
-            <div class="row">
-                <div id="logo" class="col">
-                    <img src="../images/logo.png">
-                    <h2>Hand Me Down</h2>
-                </div>
-                <nav class="col text-md-right">
-                    <ul>
-                        <li><a href="#">Get Books</a></li>
-                        <li><a href="#">Get Stationary</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Login</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
+<body onload="renderAHeader()">
+    <div class="container-nav" id="container-nav"></div>
     <div id="success"></div>
     <div class="container">
         <form id='sell-books' onsubmit="submitBook(event)">
@@ -61,7 +51,7 @@
                 </div>
                 <div class="form-group row">
                     <label class="text-md-right col-md-2 align-self-center">Year<div class="star">*</div></label>
-                    <div class="col-9">
+                    <div class="col-md-9">
                         <select class="form-control" id="year" required>
                             <option>Choose</option>
                             <option>FE</option>
@@ -73,7 +63,7 @@
                 </div>
                 <div class="text-md-right form-group row">
                     <label class="col-md-2">Description</label>
-                    <div class="col-9">
+                    <div class="col-md-9">
                         <textarea class="form-control" placeholder="how old is your book?" id="description"></textarea>
                     </div>
                 </div>
@@ -92,13 +82,13 @@
                 </div>
                 <div class='content row'>
                     <label class="col-md-2 text-md-right">Upload Photos</label>
-                    <div action="http://127.0.0.1:1337/api/upload" class="dropzone col-md-9" id="myDropzone">
+                    <div action="http://127.0.0.1:1337/api/books/upload" class="dropzone col-md-9" id="myDropzone">
                   
                     </div> 
                 </div> 
                 <div class="form-group row">
                     <div class="offset-md-5 col-auto">
-                        <button class="btn btn-primary" type="submit"><a href="./success.html">Submit</a></button>
+                        <button class="btn btn-primary" type="submit">Submit</button>
                     </div>
                 </div>
             </fieldset>

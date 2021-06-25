@@ -4,38 +4,15 @@
     box-sizing: border-box;
 }
 header img{
-    height: 50px;
-    width: 50px;
+    height: 70px;
+    width: 85px;
     padding: 10px;
 }
-header{
-    background-color:#cb9ca1;
+.navbar-brand a{
+color: aliceblue;
 }
-header a, header h2{
-padding: 15px;
-text-decoration: none;
-color:white;
-}
-header nav li{
-    display: inline-block;
-    background-color: #cb9ca1;
-    padding: 10px;
-    margin-top: 5px;
-    transition: transform .2s;
-    text-align: center;
-}
-header h2{
-    display: inline-block;
-    font-size: 1.2em;
-}
-header nav a{
-    padding-top: 5px;
-    -webkit-transition: background-color 1s;
-}
-header nav a:hover{
-    background-color: white;
+.navbar-brand a:hover{
     text-decoration: none;
-    color:black;
 }
 .super{
     background-color: rgba(0,0,0,0.9);
@@ -97,11 +74,11 @@ margin:10px auto;
 }
 .article-title{
     padding: 15px;
-    text-align: left;
+    text-align: center;
 }
 .article-text{
     padding: 0px 15px 10px;
-    text-align: left;
+    text-align: center;
 }
 footer{
     background-color: black;
@@ -140,3 +117,16 @@ footer form button{
     margin: 10px 0px;
     border: none; 
 }
+.collapse{
+    text-align: right;
+}
+.navbar-brand img{
+ height: 50px;
+ width: 75px;
+ margin-right: 10px;
+}
+@media screen and (min-width: 576px) {
+    .book-image img {
+        width: 95%;
+    }
+  }

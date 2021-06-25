@@ -1,67 +1,31 @@
 <html>
-    <head>
-        <title>Book Search</title>
-        <link rel="stylesheet" href="../css/book-search.css">
-        <link rel="stylesheet" href="../css/bootstrap.min.css">
-        <meta name="viewport" content="width=device-width, initial-scale=0.6">
-        <script src="../javascript/bookSearch.js"></script>
-    </head>
-    <body>
-        <header>
-            <div class="col">
-                <div class="row">
-                    <div id="logo" class="col">
-                        <img src="../images/logo.png">
-                        <h2>Hand Me Down</h2>
-                    </div>
-                    <nav class="col text-md-right">
-                        <ul>
-                            <li><a href="#">Get Books</a></li>
-                            <li><a href="#">Get Stationary</a></li>
-                            <li><a href="#">Contact Us</a></li>
-                            <li><a href="#">Login</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </header>
-        <div class="container">
+
+<head>
+    <title>Book Search</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/book-search.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="/javascript/jquery.slim.min.js"></script>
+    <script src="/javascript/popper.min.js"></script>
+    <script src="/javascript/bootstrap.min.js"></script>
+    <script src="/javascript/header.js"></script>
+
+    <script src="/javascript/bookSearch.js"></script>
+    <script src="/javascript/header.js"></script>
+</head>
+
+<body onload="renderAHeader()">
+    <div class="container-nav" id="container-nav"></div>
+   
+    <div class="container">
         <div class="search-bar row d-flex justify-content-center">
-                <input type="text" placeholder="Search Here" class="col-6">
-                <button class="col-1">Search</button>
+            <input type="text" placeholder="Search Here" class="col-lg-7">
+            <button class="col-lg-1 col-sm-2">Search</button>
         </div>
         <div id="details">
-        <!-- <section class="row">
-            <img src="../images/books.jpeg" class="col-2">
-            <div class="article-contents col-9">
-               <div class="article-title">Engineering Chemistry</div>
-               <div class="article-subtitle">Techknowledge Publications</div>
-               <div class="price">₹ 100</div>
-               <div class="contact">Mobile Number:123456790</div>
-            </div>         
-        </section>
-        <section class="row">
-            <img src="../images/books.jpeg" class="col-2">
-            <div class="article-contents col-9">
-               <div class="article-title">Engineering Graphics</div>
-               <div class="article-subtitle">Techknowledge Publications</div>
-               <div class="price">₹ 200</div>
-               <div class="contact">Mobile Number:123456790</div>
-            </div>
-            <hr>
-        </section>
-        <section class="row">
-            <img src="../images/books.jpeg" class="col-2">
-            <div class="article-contents col-9">
-               <div class="article-title">Engineering Mathematics 2</div>
-               <div class="article-subtitle">Nirali Publications</div>
-               <div class="price">₹ 250</div>
-               <div class="contact">Mobile Number:123456790</div>
-            </div>
-            <hr>
-        </section> -->
         </div>
-        </div>
-    </body>
+    </div>
+</body>
 
 </html>

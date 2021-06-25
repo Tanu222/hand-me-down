@@ -3,7 +3,8 @@ let shortid = require("shortid");
 let fs = require('fs');
 
 
-const CONTENT_STORAGE_LOCAL_DIR = __dirname + '\\upload';
+// const CONTENT_STORAGE_LOCAL_DIR = __dirname + '//app//upload';
+const CONTENT_STORAGE_LOCAL_DIR = "C:\\dev\\HandMeDown\\app\\upload\\";
 
 exports.uploadFile = (req, next) => {
 
@@ -29,6 +30,7 @@ exports.uploadFile = (req, next) => {
         });
 
         console.log("Busboy: File Upload starts: " + filename + ':' + mimetype);
+        console.log("File is written at " + CONTENT_STORAGE_LOCAL_DIR + serverFileName);
         let fstream = fs.createWriteStream(CONTENT_STORAGE_LOCAL_DIR + serverFileName);
         file.pipe(fstream);
 

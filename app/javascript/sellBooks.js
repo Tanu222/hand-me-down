@@ -16,7 +16,7 @@ let submitBook = (e) => {
         "imageUrl": bookImageUrl
     }
     console.log(JSON.stringify(book));
-    postData('http://127.0.0.1:1337/book', { book })
+    postData('http://127.0.0.1:1337/api/books', { book })
         .then(data => {
             console.log(data); // JSON data parsed by `data.json()` call
             // window.location.href = "./success.html";

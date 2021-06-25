@@ -6,7 +6,7 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const bookId = urlParams.get('id')
 
-fetch('http://127.0.0.1:1337/book?id='+bookId)
+fetch('http://127.0.0.1:1337/api/books?id='+bookId)
     .then(response => response.json())
     .then(data => {
         book = data;
@@ -31,13 +31,20 @@ async function renderABook(book) {
 
 
 function renderBook(book) {
+    let imageUrl;
+    if (book.image_url) {
+      imageUrl = "../upload/" + book.image_url;
+    } else {
+      imageUrl = "../images/books.jpeg";
+    }
+
     return (
-        `<div class="row my-2">
-        <div class=" offset-2 col-md-3">
-            <img src="../images/books.jpeg" class="">
+        `<div class="row my-2 mt-4">
+        <div class=" offset-md-1 col-md-5  col-lg-3 offset-lg-2 book-image ">
+            <img src="${imageUrl}" class="">
             <div class="price">Price: ${book.price}</div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-5 ml-5">
             <div class="title">${book.title}</div>
             <hr>
             <div class="author inline"><span>Author: </span>${book.author}</div>
@@ -54,8 +61,8 @@ function renderBook(book) {
         </div>
     </div>
     <hr>
-    <div class="row description">
-        <div class="offset-2 col-md-7">
+    <div class="row description ml-4">
+        <div class="offset-md-1 offset-lg-2  col-md-7">
             <div class="description-title">Description</div>
             <div class="content">${book.description}</div>
         </div>

@@ -2,62 +2,22 @@
 
 <head>
     <title>Book Detail</title>
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/book-detail.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/book-detail.css">
+    <link rel="stylesheet" href="/css/style.css">
     <script src="../javascript/bookDetail.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="/javascript/jquery.slim.min.js"></script>
+    <script src="/javascript/popper.min.js"></script>
+    <script src="/javascript/bootstrap.min.js"></script>
+
+    <script src="/javascript/header.js"></script>
 </head>
 
-<body>
-    <header>
-        <div class="col">
-            <div class="row">
-                <div id="logo" class="col">
-                    <img src="../images/logo2.png">
-                    <h2>Hand Me Down</h2>
-                </div>
-                <nav class="col text-md-right">
-                    <ul>
-                        <li><a href="./book-search.html">Get Books</a></li>
-                        <li><a href="#">Get Stationery</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Login</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
+<body onload="renderAHeader()">
+    <div class="container-nav" id="container-nav"></div>
     <div class="container">
         <div class="wrap" id="book">
-            <!-- <div class="row my-2">
-                <div class=" offset-2 col-md-3">
-                    <img src="../images/books.jpeg" class="">
-                    <div class="price">Price ₹ 200</div>
-                </div>
-                <div class="col-md-4">
-                    <div class="title">Engineering Graphics </div>
-                    <hr>
-                    <div class="author inline"><span>Author: </span> A K Gupta</div>
-                    <div class="publication"><span>Publication: </span> Tecknowledge Publication</div>
-                    <div class="subject"><span>Subject: </span> Engineering Graphics</div>
-                    <div class="year"><span>Year: </span> FE</div>
-                    <hr>
-                    <div class="contact">
-                        <div class="contact-title">Contact Details</div>
-                        <div class="name"><span>Name: </span> Parvati Patil</div>
-                        <div class="email"><span>Email: </span> parvati.patil@gmail.com</div>
-                        <div class="number"><span>Phone: </span> 4297493756</div>
-                    </div>
-                </div>
-            </div>
-            <hr>
-            <div class="row description">
-                <div class="offset-2 col-md-7">
-                    <div class="description-title">Description</div>
-                    <div class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Possimus cum iure, rerum autem tenetur, illo laboriosam ipsam blanditiis rem explicabo nobis.
-                        Enim ducimus, minus reiciendis voluptas fugiat incidunt quasi deleniti.</div>
-                </div>
-            </div> -->
         </div>
     </div>
 </body>
