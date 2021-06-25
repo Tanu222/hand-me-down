@@ -8,17 +8,24 @@ const { Client } = require('pg');
 //     port: 5432,
 // };
 
+// const pgConfig = {
+//     host: 'ec2-52-21-153-207.compute-1.amazonaws.com',  //use this in local- heroku case
+//     //host: 'localhost',
+//     database: 'd84gh391jbntjj',
+//     user: 'urtegrhlzovrhr',
+//     port: 5432,
+//     password: '8a5e78df01e12ef0601d3143aef9fdbaab8c3df4d98c4e922b5225c72178b0f5',
+//     ssl: {
+//         rejectUnauthorized: false
+//       }
+// };
+// use this in heroku-heroku case
 const pgConfig = {
-    //host: 'ec2-52-21-153-207.compute-1.amazonaws.com',  //use this in local- heroku case
-    host: 'localhost',// use this in heroku-heroku case
-    database: 'd84gh391jbntjj',
-    user: 'urtegrhlzovrhr',
-    port: 5432,
-    password: '8a5e78df01e12ef0601d3143aef9fdbaab8c3df4d98c4e922b5225c72178b0f5',
+    connectionString: process.env.DATABASE_URL,
     ssl: {
-        rejectUnauthorized: false
-      }
-};
+      rejectUnauthorized: false
+    }
+  };
 
 exports.createbook = (book, next) => {
     const pgClient = new Client( pgConfig );
