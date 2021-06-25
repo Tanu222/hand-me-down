@@ -63,7 +63,7 @@ Dropzone.options.myDropzone = {
     uploadMultiple: false,
     parallelUploads: 1,
     maxFiles: 1,
-    maxFilesize: 1,
+    maxFilesize: 100,
     acceptedFiles: 'image/*',
     addRemoveLinks: true,
     init: function () {
