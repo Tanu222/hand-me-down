@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/book-search.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="/javascript/app.js"></script>
     <script src="/javascript/jquery.slim.min.js"></script>
     <script src="/javascript/popper.min.js"></script>
     <script src="/javascript/bootstrap.min.js"></script>
@@ -20,8 +22,8 @@
    
     <div class="container">
         <div class="search-bar row d-flex justify-content-center">
-            <input type="text" placeholder="Search Here" class="col-lg-7">
-            <button class="col-lg-1 col-sm-2">Find</button>
+            <input type="text" placeholder="Search Here" class="col-lg-7 col-9" id="search-bar">
+            <button class="col-lg-1 col-2" onClick="searchBook()">Find</button>
         </div>
         <div id="details">
         </div>

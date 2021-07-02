@@ -40,6 +40,9 @@ section{
     font-weight: 500;
     font-size: 1.3em;
 }
+.article-contents{
+padding: 0;
+}
 section img{
     width: 50%;
 }

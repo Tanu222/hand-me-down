@@ -14,6 +14,9 @@ color: aliceblue;
 .navbar-brand a:hover{
     text-decoration: none;
 }
+nav{
+    background-color:#cb9b8c;
+}
 .collapse{
     text-align: right;
 }
@@ -26,21 +29,22 @@ color: aliceblue;
     height: 90%;
     background-image: url(../images/cover3.bmp.png);
     background-size:cover;
+    opacity: 0.8;
 }
 .intro-text{
-    color: white;
+    color: #cb9b8c;
     text-align: center;
     position: relative;
     top: 200px;
 }
 .intro-text h2{
-background-color:#ffcccbc7 ;
+background-color:#ffffee ;
 padding: 15px;
 font-size: 50px;
 }
 .intro-text h3{
     padding: 10px;
-    background-color:#ffcccbc7;
+    background-color: #ffffee;
 }
 #products{
     text-align:center;

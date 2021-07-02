@@ -1,5 +1,5 @@
 //console.log("Inside javascript of book-search");
-const API_SERVER = 'https://handmidown.herokuapp.com';
+
 
 let book;
 
@@ -56,8 +56,8 @@ function renderBook(book) {
             <div class="contact">
                 <div class="contact-title">Contact Details</div>
                 <div class="name"><span>Name: </span>${book.seller_username}</div>
-                <div class="email"><span>Email: </span>${book.seller_email}</div>
-                <div class="number"><span>Phone: </span>${book.seller_phone}</div>
+                <div class="email"><span>Email: </span><a href="mailto:${book.seller_email}">${book.seller_email}</a></div>
+                <div class="number"><span>Phone: </span><a href="tel:${book.seller_phone}">${book.seller_phone}</a></div>
             </div>
         </div>
     </div>

@@ -10,7 +10,7 @@ async function renderAHeader() {
 function renderHeader() {
 
     return (
-        `<nav class="navbar bg-dark navbar-dark navbar-expand-sm">
+        `<nav class="navbar navbar-dark navbar-expand-sm">
         <div class="navbar-brand d-sm-inline-block"><a href="/index.html"><img src="/images/logo3.png">Hand Me Down</a></div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myTogglerNav"
             aria-controls="myTogglerNav" aria-expanded="false" aria-label="Toggle navigation"><span

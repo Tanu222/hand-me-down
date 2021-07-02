@@ -1,8 +1,7 @@
-const API_SERVER = 'https://handmidown.herokuapp.com';
-
 
 let form = document.getElementById('sell-books');
 let bookImageUrl;
+
 let submitBook = (e) => {
     console.log('Submit button pressed');
     e.preventDefault();
@@ -16,19 +15,24 @@ let submitBook = (e) => {
         "description": e.target.elements.description.value,
         "seller_phone": e.target.elements.phone.value,
         "price": e.target.elements.price.value,
-        "imageUrl": bookImageUrl
+        "imageUrl": bookImageUrl,
+        "user_name": e.target.elements.name.value,
+        "user_email": e.target.elements.email.value
     }
     console.log(JSON.stringify(book));
+    
     postData(API_SERVER + '/api/books', { book })
-        .then(data => {
+       .then(data => {
             console.log(data); // JSON data parsed by `data.json()` call
-            // window.location.href = "./success.html";
+            window.location.href = "./success.html";
         })
         .catch((err) => {
             console.error(err);
+            window.location.href = "./failure.html";
         });
+        
     document.getElementById('sell-books').reset();
-    showSuccess();
+    //showSuccess();
     return false;
 }
 
@@ -37,6 +41,7 @@ function showSuccess() {
         `Form Submitted Successfully!
                 <a href="./book-search.html">Go to Search Books page</a>`
 }
+
 
 async function postData(url = '', data = {}) {
     // Default options are marked with *
@@ -58,7 +63,7 @@ async function postData(url = '', data = {}) {
 }
 
 Dropzone.options.myDropzone = {
-    // url: 'http://127.0.0.1:1337/upload',
+    //url: 'http://127.0.0.1:1337/upload',
     // autoProcessQueue: false,
     uploadMultiple: false,
     parallelUploads: 1,

@@ -8,6 +8,8 @@
     <script src="../lib/dropzone-5.7.0/dist/dropzone.js"></script>
     <link rel="stylesheet" href="../lib/dropzone-5.7.0/dist/dropzone.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="/javascript/app.js"></script>
     <script src="/javascript/jquery.slim.min.js"></script>
     <script src="/javascript/popper.min.js"></script>
     <script src="/javascript/bootstrap.min.js"></script>
@@ -25,32 +27,32 @@
             <h2>Post Your Product</h2>
             <fieldset class="form-group">
                 <div class="form-group row">
-                    <label class="col-form-label  text-md-right col-md-2 align-self-center" name="searchTerm">Book Name
+                    <label class="col-form-label  text-md-right col-md-3 align-self-center" name="searchTerm">Book Name
                         <div class="star">*</div></label>
                     <div class="col-md-9">
                         <input class="form-control" type="text" placeholder="Book Name" id="bookName" required>
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label class="text-md-right col-md-2 align-self-center">Author</label>
+                    <label class="text-md-right col-md-3 align-self-center">Author<div class="star">*</div></label>
                     <div class="col-md-9">
-                        <input class="form-control" type="text" placeholder="Author" id="author">
+                        <input class="form-control" type="text" placeholder="Author" id="author" required>
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label class="text-md-right col-md-2 align-self-center">Publications</label>
+                    <label class="text-md-right col-md-3 align-self-center">Publications<div class="star">*</div></label>
                     <div class="col-md-9">
-                        <input class="form-control" type="text" placeholder="Publications" id="publication">
+                        <input class="form-control" type="text" placeholder="Publications" id="publication" required>
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label class="text-md-right col-md-2 align-self-center">Subject<div class="star">*</div></label>
+                    <label class="text-md-right col-md-3 align-self-center">Subject<div class="star">*</div></label>
                     <div class="col-md-9">
                         <input class="form-control" type="text" placeholder="Subject" id="subject" required>
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label class="text-md-right col-md-2 align-self-center">Year<div class="star">*</div></label>
+                    <label class="text-md-right col-md-3 align-self-center">Year<div class="star">*</div></label>
                     <div class="col-md-9">
                         <select class="form-control" id="year" required>
                             <option>Choose</option>
@@ -62,29 +64,42 @@
                     </div>
                 </div>
                 <div class="text-md-right form-group row">
-                    <label class="col-md-2">Description</label>
+                    <label class="col-md-3">Description<div class="star">*</div></label>
                     <div class="col-md-9">
-                        <textarea class="form-control" placeholder="how old is your book?" id="description"></textarea>
+                        <textarea rows="4" class="form-control" placeholder="how old is your book?" id="description" required></textarea>
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label class="text-md-right col-md-2 align-self-center">Contact Number<div class="star">*</div>
+                    <label class="text-md-right col-md-3 align-self-center">Your Name<div class="star">*</div>
                         </label>
                     <div class="col-md-9">
-                        <input class="form-control" type="tel" placeholder="Contact Number" id="phone" required>
+                        <input class="form-control" type="text" placeholder="Your Name" id="name" required>
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label class="text-md-right col-md-2 align-self-center">Set a Price<div class="star">*</div></label>
+                    <label class="text-md-right col-md-3 align-self-center">Email<div class="star">*</div>
+                        </label>
+                    <div class="col-md-9">
+                        <input class="form-control" type="email" placeholder="Email" id="email" required>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="text-md-right col-md-3 align-self-center">Contact Number
+                        </label>
+                    <div class="col-md-9">
+                        <input class="form-control" type="tel" placeholder="Contact Number" id="phone">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="text-md-right col-md-3 align-self-center">Set a Price<div class="star">*</div></label>
                     <div class="col-md-9">
                         <input class="form-control" type="number" placeholder="Price" id="price" required>
                     </div>
                 </div>
                 <div class='content row'>
-                    <label class="col-md-2 text-md-right">Upload Photos</label>
-                    <div action="https://handmidown.herokuapp.com/api/books/upload" class="dropzone col-md-9" id="myDropzone">
-                  
-                    </div> 
+                    <label class="col-md-3 text-md-right">Upload Photos<div class="star">*</div></label>
+                    <div action="https://handmidown.herokuapp.com/api/books/upload" class="dropzone col-md-9" id="myDropzone" required ></div>
+                    <!-- <div action="http://127.0.0.1:5000/api/books/upload" class="dropzone col-md-9" id="myDropzone" required ></div>  -->
                 </div> 
                 <div class="form-group row">
                     <div class="offset-md-5 col-auto">

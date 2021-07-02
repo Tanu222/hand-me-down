@@ -41,11 +41,12 @@ const createbook = (req, res) => {
         year: req.body.book.year,
         description: req.body.book.description,
         seller_userid: 2,
-        seller_username: 'Julia',
-        seller_email: 'julia.tendulkar@gmail.com',
+        seller_username: req.body.book.user_name,
+        seller_email: req.body.book.user_email,
         seller_phone: req.body.book.seller_phone,
         price: req.body.book.price,
-        imageUrl: req.body.book.imageUrl
+        imageUrl: req.body.book.imageUrl,
+        create_ts: new Date().toISOString()
     };
 
     console.log("book" + JSON.stringify(book))
@@ -101,6 +102,23 @@ router.use("/upload", (req, res) => {
 
 });
 
+router.use('/search', (req, res, next) => {
+    if (req.method === 'GET') {
+        bookDao.searchbooks(req.query.keyword,(err, books) => {
+            if (err) {
+                console.error("Error reported while searching books " + err.message);
+                res.send("error while searching books")
+            } else {
+                res.send((books));
+            }
+        });
+    } else {
+        console.error(req.method + ' ' + req.baseUrl + ' - Request method is not supported.');
+        return res.status(405).send({
+            message: 'Invalid Request Method'
+        });
+    }
+});
 
 
 router.use('/all', (req, res, next) => {
