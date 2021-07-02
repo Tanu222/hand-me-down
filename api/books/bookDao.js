@@ -1,12 +1,12 @@
 const { Client } = require('pg');
 //use this when server is on local
-const pgConfig = {
-    user: 'postgres',
-    host: 'localhost',
-    database: 'handmedown',
-    password: '1234',
-    port: 5432,
-};
+// const pgConfig = {
+//     user: 'postgres',
+//     host: 'localhost',
+//     database: 'handmedown',
+//     password: '1234',
+//     port: 5432,
+// };
 
 // const pgConfig = {
 //     host: 'ec2-52-21-153-207.compute-1.amazonaws.com',  //use this in local- heroku case
@@ -19,13 +19,13 @@ const pgConfig = {
 //         rejectUnauthorized: false
 //       }
 // };
-// use this in heroku-heroku case
-// const pgConfig = {
-//     connectionString: process.env.DATABASE_URL,
-//     ssl: {
-//       rejectUnauthorized: false
-//     }
-//   };
+//use this in heroku-heroku case
+const pgConfig = {
+    connectionString: process.env.DATABASE_URL,
+    ssl: {
+      rejectUnauthorized: false
+    }
+  };
 
 exports.createbook = (book, next) => {
     const pgClient = new Client( pgConfig );
