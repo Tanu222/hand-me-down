@@ -18,23 +18,21 @@ exports.uploadFile = (req, next) => {
 
         console.log('Busboy: File [' + fieldname + ']: filename: ' + filename + ', encoding: ' + encoding + ', mimetype: ' + mimetype);
 
-        let fileNamePrefix = 'img';
-
-        let serverFileName = fileNamePrefix + '-' + shortid.generate() + '.png';
+        let serverFileName = 'img-' + shortid.generate() + '.' + extractFileExtension(filename);
 
         file.on('data', (data) => {
-            console.log('Busboy: File Upload [' + fieldname + '] received ' + data.length + ' bytes');
+            console.log('Busboy: File Upload [' + filename + '] received ' + data.length + ' bytes');
         });
 
         file.on('end', () => {
-            console.log('Busboy: File Upload [' + fieldname + '] Finished');
+            console.log('Busboy: File Upload [' + filename + '] Finished');
             setTimeout(() => {
                 return next(null, serverFileName);
             }, 100);
         });
 
         console.log("Busboy: File Upload starts: " + filename + ':' + mimetype);
-        console.log("File is written at " + CONTENT_STORAGE_LOCAL_DIR + serverFileName);
+        console.log("File will be written at " + CONTENT_STORAGE_LOCAL_DIR + serverFileName);
         let fstream = fs.createWriteStream(CONTENT_STORAGE_LOCAL_DIR + serverFileName);
         file.pipe(fstream);
 
