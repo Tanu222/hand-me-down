@@ -2,8 +2,8 @@ let Busboy = require("busboy");
 let shortid = require("shortid");
 let fs = require('fs');
 
-//const CONTENT_STORAGE_LOCAL_DIR = '/app/app/upload/';
-const CONTENT_STORAGE_LOCAL_DIR = "C:\\dev\\HandMeDown\\app\\upload\\";
+const CONTENT_STORAGE_LOCAL_DIR = '/app/app/upload/';
+//const CONTENT_STORAGE_LOCAL_DIR = "C:\\dev\\HandMeDown\\app\\upload\\";
 
 exports.uploadFile = (req, next) => {
 
