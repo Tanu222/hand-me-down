@@ -136,11 +136,15 @@ const uploadFile = (req, next) => {
     media.uploadFile(req, (err, serverFilename) => {
         if (err) return next(err);
 
-        let filesizeInKB = media.getFilesizeInKB(CONTENT_STORAGE_LOCAL_DIR + serverFilename);
+        let fileUrl = CONTENT_STORAGE_LOCAL_DIR + serverFilename;
+        console.log('About to read file size ', filesizeInKB);
+        let filesizeInKB = media.getFilesizeInKB(fileUrl);
         console.log('filesize in kb ', filesizeInKB);
+
         media.compressFile(CONTENT_STORAGE_LOCAL_DIR, serverFilename, filesizeInKB, (err, compressedFileUrl) => {
             if (err) return next(err);
-            console.log("compressed file url " + compressedFileUrl)
+
+            console.log("Compressed file url " + compressedFileUrl)
             return next(null, compressedFileUrl);
         });
 
