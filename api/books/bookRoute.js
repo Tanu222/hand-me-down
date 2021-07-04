@@ -184,7 +184,7 @@ router.use('/all', (req, res, next) => {
                         console.error("Error reported while restoring Images for books " + err.message);
                         res.send("Error while searching books")
                     }
-                    books.array.forEach(book => {
+                    books.forEach(book => {
                         book.image_blob=null;
                     });
                     res.send((books));
