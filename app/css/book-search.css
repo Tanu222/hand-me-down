@@ -13,16 +13,22 @@
     margin: 10px;
 }
 .search-bar button{
-    background-color: rgba(255, 127, 80, 0.705);
+    background-color: #fa5788 ;
     text-align: center;
     border:none ;
 }
 .search-bar button:hover{
-    background-color: rgba(255, 127, 80, 0.9);
+    background-color: #fa5788cb;
 }
 section{
     padding: 20px;
     border-bottom: 1px solid rgba(0,0,0,0.5);
+}
+.article-title1 a{
+    color: #c2185b ;
+}
+.contact a{
+    color: #fa5788;
 }
 .article-title1{
     font-size: 1.4em;
@@ -40,11 +46,24 @@ section{
     font-weight: 500;
     font-size: 1.3em;
 }
+
 .article-contents{
 padding: 0;
 }
 section img{
     width: 50%;
+}
+#count p{
+  font-weight: 560;
+  font-style: italic;
+  color: #c2185b;
+}
+button img{
+    width: 25px;
+}
+button{
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
 }
 @media screen and (min-width: 576px) {
     section img{

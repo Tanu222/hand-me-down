@@ -15,6 +15,12 @@ fetch(API_SERVER + '/api/books/all')
 
 
 async function renderBooks() {
+  let count = books.length;
+  if(count==0){
+    notFound();
+  }
+  let contain = document.getElementById('count');
+  contain.innerHTML = `<p>${count} books found</p>`;
   let html = '';
   books.forEach(book => {
     let htmlSegment = renderBook(book);
@@ -22,6 +28,15 @@ async function renderBooks() {
   });
 
   let container = document.getElementById('details');
+  container.innerHTML = html;
+}
+
+function notFound(){
+  let html = '';
+  let htmlSegment = `<p>Sorry! We could not find any matches. Please change your search criteria.</p>`;
+  html += htmlSegment;
+
+  let container = document.getElementById('not-found');
   container.innerHTML = html;
 }
 

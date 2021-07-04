@@ -15,7 +15,7 @@ color: aliceblue;
     text-decoration: none;
 }
 nav{
-    background-color:#cb9b8c;
+    background-color:#8c0032 ;
 }
 .collapse{
     text-align: right;
@@ -29,28 +29,28 @@ nav{
     height: 90%;
     background-image: url(../images/cover3.bmp.png);
     background-size:cover;
-    opacity: 0.8;
+    opacity: 1;
 }
 .intro-text{
-    color: #cb9b8c;
+    color:#8c0032 ;
     text-align: center;
     position: relative;
     top: 200px;
 }
 .intro-text h2{
-background-color:#ffffee ;
+background-color:#fa5788;
 padding: 15px;
 font-size: 50px;
 }
 .intro-text h3{
     padding: 10px;
-    background-color: #ffffee;
+    background-color: #fa5788;
 }
 #products{
     text-align:center;
 }
 #products .call-to-action a{
-    background-color: #ef9a9a;
+    background-color: #c2185b;
     color:white;
     padding: 15px;
     text-decoration: none;
@@ -82,48 +82,22 @@ margin:10px auto;
 .article-title{
     padding: 15px;
     text-align: center;
+    color: #c2185b;
 }
 .article-text{
     padding: 0px 15px 10px;
     text-align: center;
 }
 footer{
-    background-color: black;
+    background-color: #8c0032;
     color: white;
     padding:20px;
 }
-footer .services{
-    padding: 5px 0px;
-}
-footer .services ul{
-    list-style: none;
-}
-footer .services a{
-    color: white;
-}
-footer .services li{
-padding: 5px 0px;
-}
+
 footer .contact-info{
     padding: 10px 0px;
 }
-footer form{
-    padding: 10px 0px;
-}
-footer form input{
-    width: 30%;
-    padding: 10px 0px;
-    margin: 10px 0;
-}
-footer form button{
-    background-color:  rgba(153, 66, 34,1);
-    color:white;
-    padding: 15px;
-    text-decoration: none;
-    display: inline-block;
-    margin: 10px 0px;
-    border: none; 
-}
+
 .collapse{
     text-align: right;
 }
