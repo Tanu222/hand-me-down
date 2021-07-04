@@ -136,7 +136,7 @@ const uploadFile = (req, next) => {
     media.uploadFile(req, (err, serverFilename) => {
         if (err) return next(err);
 
-        let fileUrl = CONTENT_STORAGE_LOCAL_DIR + serverFilename;
+        let fileUrl = (CONTENT_STORAGE_LOCAL_DIR + serverFilename).trim();
         console.log('About to read file size for ', fileUrl);
         let filesizeInKB = media.getFilesizeInKB(fileUrl);
         console.log('filesize in kb ', filesizeInKB);
