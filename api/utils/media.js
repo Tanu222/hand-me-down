@@ -28,7 +28,9 @@ exports.uploadFile = (req, next) => {
 
         file.on('end', () => {
             console.log('Busboy: File Upload [' + fieldname + '] Finished');
-            return next(null, serverFileName);
+            setTimeout(() => {
+                return next(null, serverFileName);
+            }, 100);
         });
 
         console.log("Busboy: File Upload starts: " + filename + ':' + mimetype);
