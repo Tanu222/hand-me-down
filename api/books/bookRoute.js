@@ -180,11 +180,13 @@ router.use('/all', (req, res, next) => {
                 res.send("Error while searching books")
             } else {
                 media.restoreImagesFromDB(books, (err) => {
-
                     if (err) {
                         console.error("Error reported while restoring Images for books " + err.message);
                         res.send("Error while searching books")
                     }
+                    books.array.forEach(book => {
+                        book.image_blob=null;
+                    });
                     res.send((books));
 
                 });
