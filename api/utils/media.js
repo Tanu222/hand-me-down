@@ -146,7 +146,7 @@ const getFilesizeInBytes = (filename) => {
         const stats = fs.statSync(filename);
         return stats.size;
     } catch (e) {
-        console.log('error', 'Error getting file stats for ' + filename);
+        console.log('error', 'Error getting file stats for ' + filename + ' : ' + e.message);
         return 0;
     }
 };
