@@ -33,7 +33,7 @@ exports.createbook = (book, next) => {
         + 'VALUES($1, $2, $3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15) RETURNING *';
     const values = [book.id, book.title, book.author, book.publication, book.subject, book.year, book.description,
     book.seller_userid, book.seller_username, book.seller_email, book.seller_phone, book.price, book.imageUrl, book.create_ts, book.image_blob];
-    console.log("Values" + JSON.stringify(values))
+   // console.log("Values" + JSON.stringify(values))
     pgClient.query(query, values, (err, res) => {
         if (err) {
             console.error(err);
@@ -59,6 +59,7 @@ exports.selectbooks = (next) => {
         }
         console.log('Data read successful');
         pgClient.end();
+        //console.log(res.rows)
         return next(null, res.rows);
     });
 }

@@ -41,6 +41,15 @@ function notFound(){
 }
 
 function renderBook(book) {
+  let y= book.create_ts.substr(0,4);
+  let m = book.create_ts.substr(5,2);
+  let dat = book.create_ts.substr(8,2)
+  let d = new Date(y, m-1, dat);
+  let ye = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(d);
+  let mo = new Intl.DateTimeFormat('en', { month: 'short' }).format(d);
+  let da = new Intl.DateTimeFormat('en', { day: '2-digit' }).format(d);
+  let date =(`${da}-${mo}-${ye}`);
+  
 
   let imageUrl;
   if (book.image_url) {
@@ -54,10 +63,10 @@ function renderBook(book) {
           <img src="${imageUrl}" class="col-lg-2 col-sm-3 col-6" />
           <div class="article-contents col-lg-9 col-sm-9 col-6">
              <div class="article-title1"><a href="./book-detail.html?id=${book.id}">${book.title}</a></div>
+             <div class="article-subtitle d-none d-sm-block">Posted by <span class="bold">${book.seller_username}</span> on <span class="bold">${date}</span></div>
              <div class="article-subtitle">${book.publication} publications</div>
              <div class="article-subtitle">By <span class="bold">${book.author}</span></div>
              <div class="price">₹ ${book.price}</div>
-             <div class="contact d-none d-sm-block">Email id :<a href="mailto:${book.seller_email}">${book.seller_email}</a></div>
           </div>         
       </section>`
   )

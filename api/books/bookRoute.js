@@ -63,7 +63,7 @@ const createbook = (req, res) => {
         };
 
 
-        //console.log("book" + JSON.stringify(book))
+        console.log(book.create_ts)
         bookDao.createbook(book, (err) => {
             if (err) {
                 console.error("Error reported while creating book" + err.message);
@@ -191,6 +191,7 @@ router.use('/all', (req, res, next) => {
                     books.forEach(book => {
                         book.image_blob = null;
                     });
+                    //changed
                     res.send((books));
 
                 });
