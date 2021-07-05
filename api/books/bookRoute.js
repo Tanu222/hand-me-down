@@ -24,9 +24,7 @@ function getbook(request, res) {
             console.error("Error reported while selecting book " + err.message);
             res.send("error while posting book")
         } else {
-            books.forEach(book => {
-                book.image_blob=null;
-            });
+            book.image_blob = null;
             res.send((book));
         }
     });
@@ -164,7 +162,7 @@ router.use('/search', (req, res, next) => {
                 res.send("Error while searching books")
             } else {
                 books.forEach(book => {
-                    book.image_blob=null;
+                    book.image_blob = null;
                 });
                 res.send((books));
             }
@@ -191,7 +189,7 @@ router.use('/all', (req, res, next) => {
                         res.send("Error while searching books")
                     }
                     books.forEach(book => {
-                        book.image_blob=null;
+                        book.image_blob = null;
                     });
                     res.send((books));
 
