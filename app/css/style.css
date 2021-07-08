@@ -9,13 +9,13 @@ header img{
     padding: 10px;
 }
 .navbar-brand a{
-color: #8c0032;
+color: white;
 }
 .navbar-brand a:hover{
     text-decoration: none;
 }
 nav{
-    background-color: ;
+    background-color:#8c0032 ;
 }
 .collapse{
     text-align: right;
