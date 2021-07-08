@@ -63,7 +63,7 @@ const createbook = (req, res) => {
         };
 
 
-        console.log(book.create_ts)
+        //console.log(book.create_ts)
         bookDao.createbook(book, (err) => {
             if (err) {
                 console.error("Error reported while creating book" + err.message);

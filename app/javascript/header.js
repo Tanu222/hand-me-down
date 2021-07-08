@@ -21,6 +21,7 @@ function renderHeader() {
                 <a class="nav-item nav-link" href="/html/book-search.html">Search Books</a>
                 <a class="nav-item nav-link" href="/html/sell-books.html">Sell Books</a>
                 <a class="nav-item nav-link" href="#">Contact Us</a>
+                <a class="nav-item nav-link" href="#">Login</a>
             </div>
         </div>
     </nav>`

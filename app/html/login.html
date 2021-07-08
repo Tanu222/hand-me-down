@@ -2,24 +2,58 @@
   <head>
     <meta name="google-signin-scope" content="profile email">
     <meta name="google-signin-client_id" content="95796687407-n3ch0cn60gb8rqcqfsutoqp9i765fp66.apps.googleusercontent.com">
+    <script src="/javascript/app.js"></script>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">   
+    <script src="/javascript/register.js"></script>
   </head>
   <body>
-    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+    <form class="container" id='register' onsubmit="submitUser(event)">
+    <fieldset class="form-group">
+    <div class="form-group row">
+      <label class="col-form-label  text-md-right col-md-3 align-self-center" name="searchTerm">Name
+          <div class="star">*</div></label>
+      <div class="col-md-9">
+          <input class="form-control" type="text" placeholder="Name" id="name" required>
+      </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-form-label  text-md-right col-md-3 align-self-center" name="searchTerm">Email
+        <div class="star">*</div></label>
+    <div class="col-md-9">
+        <input class="form-control" type="email" placeholder="Email" id="email" required>
+    </div>
+</div>
+<div class="form-group row">
+  <label class="col-form-label  text-md-right col-md-3 align-self-center" name="searchTerm">Password
+      <div class="star">*</div></label>
+  <div class="col-md-9">
+      <input class="form-control" type="password" placeholder="Password" id="password" required>
+  </div>
+</div>
+<div class="form-group row">
+  <div class="offset-md-5 col-auto">
+      <button class="btn btn-primary" type="submit">Submit</button>
+  </div>
+</div>
+</fieldset>
+</form>
+    <!-- <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark" ></div> -->
+
     <script>
       function onSignIn(googleUser) {
         // Useful data for your client-side scripts:
         var profile = googleUser.getBasicProfile();
-        console.log("ID: " + profile.getId()); // Don't send this directly to your server!
-        console.log('Full Name: ' + profile.getName());
-        console.log('Given Name: ' + profile.getGivenName());
-        console.log('Family Name: ' + profile.getFamilyName());
-        console.log("Image URL: " + profile.getImageUrl());
-        console.log("Email: " + profile.getEmail());
 
         // The ID token you need to pass to your backend:
         var id_token = googleUser.getAuthResponse().id_token;
         console.log("ID Token: " + id_token);
+
+        let user = {
+            "user_name":profile.getName(),
+            "user_email":profile.getEmail(),
+            "photo": profile.getImageUrl()
+        }
       }
     </script>
   </body>

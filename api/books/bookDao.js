@@ -18,12 +18,6 @@ const pgConfig = {
 
 exports.createbook = (book, next) => {
     const pgClient = new Client( pgConfig );
-    // const client = new Client({
-    //     connectionString: process.env.DATABASE_URL,
-    //     ssl: {
-    //       rejectUnauthorized: false
-    //     }
-    //   });
     
     pgClient.connect();
 

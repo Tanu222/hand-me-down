@@ -4,6 +4,7 @@ let express = require("express");
 
 
 const bookRoute = require('./api/books/bookRoute');
+const userRoute = require('./api/users/userRoute');
 
 
 let config = JSON.parse(fs.readFileSync("config.json"))
@@ -33,6 +34,7 @@ app.use((req, res, next) => {
 });
 
 app.use('/api/books', bookRoute);
+app.use('/api/users', userRoute);
 
 
 
