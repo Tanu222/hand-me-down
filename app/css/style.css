@@ -15,7 +15,7 @@ color: aliceblue;
     text-decoration: none;
 }
 nav{
-    background-color:#8c0032 ;
+    background-color: ;
 }
 .collapse{
     text-align: right;
@@ -38,13 +38,13 @@ nav{
     top: 200px;
 }
 .intro-text h2{
-background-color:#fa5788;
+background-color:rgba(255, 255, 255, 0.842);
 padding: 15px;
 font-size: 50px;
 }
 .intro-text h3{
     padding: 10px;
-    background-color: #fa5788;
+    background-color: rgba(255, 255, 255, 0.842);
 }
 #products{
     text-align:center;
